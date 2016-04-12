@@ -1,4 +1,4 @@
-var messageName = 'fast-event-loop'
+var messageName = 'event-loop-test'
 
 var debug
 var count_loop = 0
@@ -6,12 +6,8 @@ var count_frame = 0
 var prev = performance.now()
 
 var handleMessage = (event) => {
-  if (event.source == window && event.data == messageName) {
-    event.stopPropagation()
     window.postMessage(messageName, '*')
-
     count_loop++
-  }
 }
 
 var displayLoop = () => {
