@@ -19,7 +19,7 @@ var displayLoop = () => {
   var fps = 1000 / (stamp - prev)
   prev = stamp
 
-  debug.innerHTML = 'FPS ' + fps.toFixed(3) + ' - # events between refresh - ' + count_loop
+  debug.innerHTML = 'FPS ' + fps.toFixed(3) + ' - # events between frames ' + count_loop
   count_loop = 0
 }
 
